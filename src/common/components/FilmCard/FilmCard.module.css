@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+    gap: 15px;
+    overflow-wrap: break-word;
+    max-width: 250px;    /* или любой нужный размер */
+    width: 100%;
+}
+
+.posterContainer {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: var(--footer-background);
+}
+
+.posterContainer:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+
+.posterImage {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.posterContainer .addFavorites.favorite {
+    opacity: 1;
+    z-index: 999;
+}
+
+.addFavorites {
+    position: absolute;
+    display: inline-flex;
+    top: 10px;
+    right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0f172a99;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.addFavorites:hover {
+    background-color: #2a49eb;
+}
+
+.posterContainer:hover .addFavorites {
+    opacity: 1;
+    z-index: 99;
+}
+
+.voteAverage {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.noImage {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+.filmTitle {
+    max-width: 100%;
+    /*height: 100%;*/
+    text-decoration: none;
+    unicode-bidi: isolate;
+    word-break: break-word;
+    color: var(--text-primary);
+}

@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #01b4e4;
+    --tertiary-color: #90cea1;
+    --text-primary: #000000;
+    --button--color: #2433e2;
+    --border--grey: #e5e7eb;
+    --footer-background: rgba(235, 235, 235, 0.35);
+    --header--menu--background: rgba(241, 231, 231, 0.82);
+
+
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+[data-theme='dark'] {
+    --primary-color: #0b1120;
+    --text-primary: #ffffff;
+    --border--grey:#141c2c;
+    --footer-background: #141c2c;
+    --header--menu--background: #1f2b40;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

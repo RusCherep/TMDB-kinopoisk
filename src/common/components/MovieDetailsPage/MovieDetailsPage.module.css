@@ -1,0 +1,267 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 32px 0;
+}
+
+.movieDataContainer{
+    display: flex;
+    gap: 20px
+}
+
+.textInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap:24px
+}
+
+.backButtonWrapper{
+    display: flex;
+    justify-content:space-between ;
+}
+
+.buttonBack{
+    width: 60px;
+    height: 30px;
+    border-radius: 99px;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: 1px solid #4e5676;
+
+    font-size: 15px;
+}
+
+.meta{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.posterWrapper {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    width: 300px;
+    height: 450px;
+}
+
+.currentFilmImage {
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.genreWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.genre{
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: var(--footer-background);
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.genreSection{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.castSection{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.castGrid {
+    display: grid;
+    grid-template-columns:repeat(6,minmax(0, 1fr));
+    gap: 24px;
+}
+
+.castCard {
+    min-width: 120px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.castPhoto {
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.actorName {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.characterName {
+    font-size: 12px;
+    color: var(--text-primary);
+}
+
+.similarMoviesSection{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.similarMoviesWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skeletonPoster {
+    display: block;
+}
+
+.skeletonTitle {
+    display: block;
+}
+
+.skeletonButton {
+    display: block;
+}
+
+.skeletonOverview {
+    display: block;
+}
+
+.skeletonCastPhoto {
+    display: block;
+}
+
+.skeletonSimilarCard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ═══ ERROR ═══ */
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    color: #d32f2f;
+    font-size: 20px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   АДАПТАЦИЯ
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+    .similarMoviesWrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+        gap: 30px;
+    }
+
+    .movieDataContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .posterWrapper {
+        width: 200px;
+    }
+
+    .currentFilmImage {
+        width: 200px;
+        height: 300px;
+    }
+
+    .similarMoviesWrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .castGrid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .castPhoto {
+        width: 100px;
+        height: 150px;
+    }
+
+    .meta {
+        gap: 10px;
+    }
+
+    .backButtonWrapper h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+        gap: 24px;
+    }
+
+    .posterWrapper {
+        width: 150px;
+    }
+
+    .currentFilmImage {
+        width: 150px;
+        height: 225px;
+    }
+
+    .similarMoviesWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .castGrid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 12px;
+    }
+
+    .castPhoto {
+        width: 80px;
+        height: 120px;
+    }
+
+    .backButtonWrapper {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .backButtonWrapper h2 {
+        font-size: 18px;
+    }
+
+    .meta {
+        font-size: 14px;
+    }
+
+    .genre {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+}

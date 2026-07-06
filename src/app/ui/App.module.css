@@ -1,0 +1,29 @@
+.appWrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.appContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--footer-background);
+    border-top: 1px solid var(--border--grey);
+    margin-top: auto;
+}
+

@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.backDrop {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    font-size: 25px;
+    color: #ffffff;
+    gap: 20px;
+}
+
+.popularFilms {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.filmCategories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+    gap: 40px;
+}
+
+.backDropSkeleton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    background: var(--skeleton-bg, #1a1a2e);
+    border-radius: 16px;
+    padding: 40px 20px;
+    gap: 16px;
+}
+
+.skeletonTitle {
+    z-index: 1;
+}
+
+.skeletonSubtitle {
+    z-index: 1;
+}
+
+.skeletonSearch {
+    z-index: 1;
+    margin-top: 8px;
+}
+
+
+.categorySkeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skeletonCategoryTitle {
+    margin-left: 4px;
+}
+
+.skeletonGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.skeletonCard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 1200px) {
+    .skeletonGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .skeletonGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .backDrop h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px) {
+    .backDrop {
+        min-height: 300px;
+        padding: 30px 16px;
+    }
+
+    .backDrop h1 {
+        font-size: 28px;
+    }
+
+    .backDrop h2 {
+        font-size: 16px;
+    }
+
+    .backDropSkeleton {
+        min-height: 300px;
+        padding: 30px 16px;
+    }
+
+    .skeletonGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .filmCategories {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .backDrop {
+        min-height: 220px;
+        padding: 20px 12px;
+    }
+
+    .backDrop h1 {
+        font-size: 22px;
+    }
+
+    .backDrop h2 {
+        font-size: 14px;
+    }
+
+    .backDropSkeleton {
+        min-height: 220px;
+        padding: 20px 12px;
+    }
+
+    .skeletonGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .filmCategories {
+        gap: 24px;
+    }
+}

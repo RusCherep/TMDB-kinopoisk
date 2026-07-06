@@ -1,0 +1,121 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.topLevel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.categoryTitle{
+    font-size: 25px;
+}
+
+.arrayFilms{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.styledButton{
+    width: 100px;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: 1px solid #4e5676;
+
+    font-size: 15px;
+}
+
+.styledButton:hover{
+    background-color: rgba(0, 1, 255, 0.35);
+}
+
+.skeletonTitle {
+    display: block;
+}
+
+.skeletonButton {
+    display: block;
+}
+
+.skeletonCard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeletonPoster {
+    width: 100%;
+}
+
+.skeletonTitle {
+    margin: 0 auto;
+}
+
+.skeletonRating {
+    margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   АДАПТАЦИЯ
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+    .arrayFilms {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+    .arrayFilms {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .categoryTitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrayFilms {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+
+    .categoryTitle {
+        font-size: 18px;
+    }
+
+    .styledButton {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrayFilms {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .topLevel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .categoryTitle {
+        font-size: 16px;
+    }
+
+    .styledButton {
+        padding: 4px 14px;
+        font-size: 11px;
+    }
+}
